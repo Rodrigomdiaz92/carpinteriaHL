@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Paleta de marca — Manual de Marca Herbik y Lauck */
+  --background: #f2efe6; /* Tiza Suave */
+  --foreground: #67250c; /* Nogal Intenso */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Colores institucionales */
+  --color-tiza: #f2efe6; /* Tiza Suave */
+  --color-nogal: #67250c; /* Nogal Intenso */
+  --color-roble: #7a3e14; /* Roble Tostado */
+  --color-arena: #d6c8b3; /* Arena Cálida */
+  --color-gris: #6b7e80; /* Gris Pizarra */
+
+  /* Tipografías de la marca */
+  --font-sans: var(--font-montserrat);
+  --font-display: "Oxanium", ui-sans-serif, system-ui, sans-serif;
+  --font-cta: "Aldrich", ui-sans-serif, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
 }
